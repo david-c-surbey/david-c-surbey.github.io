@@ -1,7 +1,12 @@
-<jss 
-constr var @url = window.location.href
-/>
-<span>
-  <jss html.ul.li="@url.value()" />
-</span>
+<p id="url"></p>
+<p id="datetime"></p>
+<script>
+function find-url() {
+  var x = window.location.href;
+  var y = new Date();
+  document.getElementById("url").innerHTML = x;
+  document.getElementById("datetime").innerHTML = y.getHours();
+}
+</script>
+
 <iframe id="A01" class="A01" src="https://david-c-surbey.github.io/home/skillset.html"/>
