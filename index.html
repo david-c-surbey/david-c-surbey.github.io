@@ -1,7 +1,9 @@
 <html>
   <header>
   <script>
-    var locality = document.location
+    const var host = new String(document.location.host);
+    const var library = new String(document.location.path);
+    const var anchor = new String('test');
   </script>
   <title>¡-Bueno.Computer- Free-Web-Site-Guide!!</title>
   <style >
@@ -29,7 +31,7 @@
   
   <body>
     <div class="menu">
-      <td><a href=locality>¡ Welllcome !</a> </td>
+      <td>¡ Welllcome !</td>
       <td>Récords</td>
       <td>MVCs to ETL & ELT's</td>
       <td>Tech Support In Strategy</td>
@@ -37,8 +39,10 @@
       <td>About</td>
       <td>More</td>
     </div>
-
-    <iframe src=locality + /home/></iframe></br>
+    <div class="content">
+      <td value=document.anchor></td>
+      <td>test2</td>
+    </div>
     
   </body>
 </html>
