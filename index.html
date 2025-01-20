@@ -1,5 +1,8 @@
 <html>
   <header>
+  <script>
+    var locality = document.location
+  </script>
   <title>¡-Bueno.Computer- Free-Web-Site-Guide!!</title>
   <style >
     body {   
@@ -26,7 +29,7 @@
   
   <body>
     <div class="menu">
-      <td><a href=String(document.location.host)>¡ Welllcome !</a> </td>
+      <td><a href=locality>¡ Welllcome !</a> </td>
       <td>Récords</td>
       <td>MVCs to ETL & ELT's</td>
       <td>Tech Support In Strategy</td>
@@ -35,7 +38,7 @@
       <td>More</td>
     </div>
 
-    <iframe src="'https://' + document.location.host + document.location.pathname || '/home'"></iframe></br>
+    <iframe src=locality + /home/></iframe></br>
     
   </body>
 </html>
