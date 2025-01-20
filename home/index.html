@@ -1,6 +1,7 @@
-
+<p id="addy"></p>
 <script>
-  var addressTree = new document.window.location.href;
+  function urlTrueKept() {
+  var addressTree = window.location.href
+  document.getElementById("addy").innerHTML = addressTree;
 </script>
-
-<iframe id="A01" class="A01" src="https://david-c-surbey.github.io/home/skillset.html"/>
+<iframe id="A01" class="A01" src="https://david-c-surbey.github.io/home/skillset.html"/ onload=urlTrueKept()>
