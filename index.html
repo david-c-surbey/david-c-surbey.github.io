@@ -22,16 +22,18 @@
   </header>
   
   <body>
+    <div class="menu">
     <a href="/"> Home </a>
     <a href="/?contact"> Contact </a>
-    <a href="/?admin-exp/windows"> About</a>
-    <a href="/?favicon.ico"> Picture</a>
+    <a href="/?admin-exp/windows"> Microsoft Windows Systems Administrator</a>
+    <a href="/?favicon.ico"> Business Analysis</a>
+    <a href="/?programming"> Programming</a>
     <div id="directory" class="directory"></div>
     <div id="cards"><iframe></iframe></div>
     <div>--foot-space--</div>
     
     <script>
-      let search = document.location.search || "?index"
+      let search = document.location.search || "?index";
       const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".html");
 
       document.getElementById("directory").innterHTML.value = directly_for;
