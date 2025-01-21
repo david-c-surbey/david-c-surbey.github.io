@@ -62,7 +62,7 @@
       const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".htm");
 
       document.getElementById("directory").innerHTML = directly_for;
-      document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("site").innerHTML.value = String(directly_for);
       document.getElementById("date-time-region").innerHTML = date_time; 
     </script>
   </body>
