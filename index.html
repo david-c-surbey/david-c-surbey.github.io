@@ -20,15 +20,15 @@
       font-size: 1.2em;
     }
 
-    site {
+    site iframe {
       width: 90%;
-      height: 110%;
+      height: 35em;
     }
 
     div.footer img {
-      margin-left: 30%;
+      margin-left: 50%;
       width: 25%;
-      margin-right: 30%;
+      margin-right: 50%;
     }
 
   </style>
@@ -53,7 +53,7 @@
     <script>
       let search = document.location.search || "?index";
       const date_time = new Date();
-      const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".html");
+      const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".htm");
 
       document.getElementById("directory").innerHTML = directly_for;
       document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
