@@ -1,10 +1,5 @@
 <html>
   <header>
-  <script>
-    const host = new var String(document.location.host);
-    const library = new var String(document.location.path);
-    const anchor = new var String('test');
-  </script>
   <title>¡-Bueno.Computer- Free-Web-Site-Guide!!</title>
   <style >
     body {   
@@ -22,27 +17,26 @@
       height: 110%;
     }
 
-    menu td {
-      font-size: small;
-    }
   </style>
   <head />
   </header>
   
   <body>
-    <div class="menu">
-      <td>¡ Welcome !</td>
-      <td>Récords</td>
-      <td>MVCs to ETL & ELT's</td>
-      <td>Tech Support In Strategy</td>
-      <td>Contact</td>
-      <td>About</td>
-      <td>More</td>
+    <div id="anchored" class="anchor-title"></div>
+    <div id="menu" class="menu"></div>
+    <div id="url-shortcut"></div>
+    <script>
+      const host = new String(document.location.host);
+      let library = new String(document.location.path);
+      let anchor = new String('test');
+
+      document.getElementById("anchored").innerHTML = anchor
+      document.getElementById("menu").innterHTML = library
+      document.getElementById("url-shortcut").innerHTML = host;
+    </script>
+
+    <div class="cards">
+      -=> content here <=-
     </div>
-    <div class="content">
-      <td valued=anchor></td>
-      <td>test2</td>
-    </div>
-    
   </body>
 </html>
