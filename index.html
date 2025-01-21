@@ -28,10 +28,10 @@
     
     <script>
       let search = document.location.search || "?index.html"
-      const directly_for = new String("/home/") + new String(search.substring(1));
+      const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".html");
 
       document.getElementById("directory").innterHTML = String(directly_for);
-      document.getElementById("cards").innerHTML = "<iframe src='/home/index.html'> </iframe>";
+      document.getElementById("cards").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
     </script>
   </body>
 </html>
