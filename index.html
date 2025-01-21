@@ -22,12 +22,12 @@
   </header>
   
   <body>
-    <div class="menu">
-    <a href="/"> Home </a>
-    <a href="/?contact"> Contact </a>
-    <a href="/?admin-exp/windows"> Microsoft Windows Systems Administrator</a>
-    <a href="/?favicon.ico"> Business Analysis</a>
-    <a href="/?programming"> Programming</a>
+    <ul class="menu">
+      <li>~<a href="/"> Home </a> ~ <a href="/?contact"> Contact </a>~</li>
+      <li><a href="/?admin-exp/windows"> Microsoft Windows Systems Administrator</a></li>
+      <li>~<a href="/?favicon.ico"> Business Analysis</a> ~ <a href="/?programming"> Programming </a>~</li>
+    </ul>
+    
     <div id="directory" class="directory"></div>
     <div id="cards"><iframe></iframe></div>
     <div>--foot-space--</div>
@@ -36,7 +36,7 @@
       let search = document.location.search || "?index";
       const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".html");
 
-      document.getElementById("directory").innterHTML.value = directly_for;
+      document.getElementById("directory").innerHTML.value = directly_for;
       document.getElementById("cards").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
     </script>
   </body>
