@@ -30,14 +30,14 @@
     <div> footer </div>
     
     <script>
-      const host = new String(document.location.host) || 'https://david-c-surbey.github.io';
-      let path = new String(document.location.pathname) || '-home-';
-      let search = new String(document.location.search) || '-paths-';
+      const host = new String(document.location.host) || "https://david-c-surbey.github.io/";
+      let path = new String(document.location.pathname);
+      let search = new String(document.location.search);
 
       document.getElementById("searching").innerHTML = search;
       document.getElementById("directory").innterHTML = path;
       document.getElementById("domain-base").innerHTML = host;
-      document.getElementById("cards").innerHTML = "'<iframe src=' + host + ('/home/' + search) + ' ></iframe>";
+      document.getElementById("cards").innerHTML = "'<iframe src=' + String(search)'> </iframe>'";
     </script>
   </body>
 </html>
