@@ -28,15 +28,16 @@
       <li>~<a href="/?etl-to-elt"> Business Analysis</a> ~ <a href="/?programming"> Programming </a>~</li>
     </ul>
     
-    <div id="directory" class="directory"></div>
     <div id="cards"><iframe></iframe></div>
+    <div>----        ----</div>
+    <div id="directory" class="directory"></div>
     <div>--footed-space--</div>
     
     <script>
       let search = document.location.search || "?index";
       const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".html");
 
-      document.getElementById("directory").innerHTML.value = directly_for;
+      document.getElementById("directory").innerHTML = directly_for;
       document.getElementById("cards").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
     </script>
   </body>
