@@ -24,14 +24,14 @@
   <body>
     <div id="directory" class="directory"></div>
     <div id="cards"></div>
-    <div>--footing--</div>
+    <div>--foote--</div>
     
     <script>
       let search = document.location.search || "?index.html"
       const directly_for = String("/home/") + search.substring(1);
 
       document.getElementById("directory").innterHTML = directly_for;
-      document.getElementById("cards").innerHTML = '<iframe src='+ String(directly_for) + '> </iframe>';
+      document.getElementById("cards").innerHTML = "'<iframe src='+ String(directly_for) + '> </iframe>'";
     </script>
   </body>
 </html>
