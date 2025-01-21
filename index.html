@@ -22,7 +22,7 @@
 
     iframe {
       width: 90%;
-      height: 90%;
+      height: 110%;
     }
 
     div.footer img {
@@ -53,7 +53,7 @@
     <script>
       let search = document.location.search || "?index";
       const date_time = new Date();
-      const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".html");
+      const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".htm");
 
       document.getElementById("directory").innerHTML = directly_for;
       document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
