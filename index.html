@@ -23,15 +23,18 @@
   
   <body>
     <div id="anchored" class="anchor-title"></div>
-    <div id="menu" class="menu"></div>
-    <div id="url-shortcut"></div>
+    <div id="searching" class="searching"></div>
+    <div id="directory" class="directory"></div>
+    <div id="domain-base"></div>
     <script>
       const host = new String(document.location.host);
-      let library = new String(document.location.path);
+      let path = new String(document.location.pathname) || '-home-';
+      let search = new String(document.location.search) || '-paths-';
       let anchor = new String('test');
 
-      document.getElementById("anchored").innerHTML = anchor
-      document.getElementById("menu").innterHTML = library
+      document.getElementById("anchored").innerHTML = anchor;
+      document.getElementById("searching").innerHTML = search;
+      document.getElementById("directory").innterHTML = path;
       document.getElementById("url-shortcut").innerHTML = host;
     </script>
 
