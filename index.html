@@ -43,14 +43,16 @@
       <div id="cards"></div>
     </div>
     <div id="directory" class="directory"></div>
-    <div>--footed-space--</div>
+    <div id="date-time-region">--footed-space--</div>
     
     <script>
       let search = document.location.search || "?index";
+      const date_time = new Date();
       const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".html");
 
       document.getElementById("directory").innerHTML = directly_for;
       document.getElementById("cards").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("date-time-region").innerHTML = date_time; 
     </script>
   </body>
 </html>
