@@ -27,17 +27,17 @@
     <div id="directory" class="directory"></div>
     <div id="domain-base"></div>
     <div id="cards"></div>
-    <div> footttter </div>
+    <div> footing </div>
     
     <script>
       const host = new String(document.location.host) || "https://david-c-surbey.github.io/";
-      let path = new String(document.location.pathname);
-      let search = new String(document.location.search);
+      const directly_from = new String("/home/");
+      let directory_lookup = new String(document.location.search.substring(1));
 
       document.getElementById("searching").innerHTML = search;
       document.getElementById("directory").innterHTML = path;
       document.getElementById("domain-base").innerHTML = host;
-      document.getElementById("cards").innerHTML = '<iframe src=' + String(search) + '> </iframe>';
+      document.getElementById("cards").innerHTML = '<iframe src=' + String(directly_from) + String(directory_lookup) + '> </iframe>';
     </script>
   </body>
 </html>
