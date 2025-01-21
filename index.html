@@ -22,22 +22,16 @@
   </header>
   
   <body>
-    <div id="anchored" class="anchor-title"></div>
-    <div id="searching" class="searching"></div>
     <div id="directory" class="directory"></div>
-    <div id="domain-base"></div>
     <div id="cards"></div>
-    <div> footing </div>
+    <div>--footing--</div>
     
     <script>
-      const host = new String(document.location.host) || "https://david-c-surbey.github.io/";
-      const directly_from = new String("/home/");
-      let directory_lookup = new String(document.location.search.substring(1));
 
-      document.getElementById("searching").innerHTML = search;
-      document.getElementById("directory").innterHTML = path;
-      document.getElementById("domain-base").innerHTML = host;
-      document.getElementById("cards").innerHTML = '<iframe src=' + String(directly_from) + String(directory_lookup) + '> </iframe>';
+      const directly_for = new (String("/home/") + String(document.location.search.substring(1)));
+
+      document.getElementById("directory").innterHTML = directly_for;
+      document.getElementById("cards").innerHTML = '<iframe src='+ String(directly_for) + '> </iframe>';
     </script>
   </body>
 </html>
