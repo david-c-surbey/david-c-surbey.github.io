@@ -45,7 +45,7 @@
     <script>
       let search = document.location.search || "?about";
       const date_time = new Date();
-      const directly_for = new String('/home/') + new String(search.substring(1)) + new String('.htm');
+      const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".htm");
 
       document.getElementById("cards").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time;
