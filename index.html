@@ -53,7 +53,7 @@
     <script>
       let search = document.location.search || "?index";
       const date_time = new Date();
-      const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".htm");
+      const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".html");
 
       document.getElementById("directory").innerHTML = directly_for;
       document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
