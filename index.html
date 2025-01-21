@@ -27,8 +27,8 @@
     <div>--footing--</div>
     
     <script>
-
-      const directly_for = new (String("/home/") + String(document.location.search.substring(1)));
+      let search = document.location.search || "?index.html"
+      const directly_for = String("/home/") + search.substring(1));
 
       document.getElementById("directory").innterHTML = directly_for;
       document.getElementById("cards").innerHTML = '<iframe src='+ String(directly_for) + '> </iframe>';
