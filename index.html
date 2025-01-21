@@ -26,20 +26,17 @@
     <div id="searching" class="searching"></div>
     <div id="directory" class="directory"></div>
     <div id="domain-base"></div>
+    <div id="cards"> </div>
+    
     <script>
-      const host = new String(document.location.host);
+      const host = new String(document.location.host) || 'https://david-c-surbey.github.io';
       let path = new String(document.location.pathname) || '-home-';
       let search = new String(document.location.search) || '-paths-';
-      let anchor = new String('test');
 
-      document.getElementById("anchored").innerHTML = anchor;
       document.getElementById("searching").innerHTML = search;
       document.getElementById("directory").innterHTML = path;
       document.getElementById("domain-base").innerHTML = host;
+      document.getElementById("cards").innerHTML = <ul><li>test</li></ul>;
     </script>
-
-    <div class="cards">
-      -=> content here <=-
-    </div>
   </body>
 </html>
