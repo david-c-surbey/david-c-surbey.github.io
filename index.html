@@ -14,6 +14,7 @@
 
     iframe {
       width: 90%;
+      height: 10em;
     }
     
     div.menu td {
@@ -29,19 +30,8 @@
   </header>
   
   <body>
-    <div class="menu">
-      <td>~</td>
-      <td> <a href="/">Home</a> </td>
-      <td> <a href="/?contact">Contact</a> </td>
-      <td> <a href="/?skillset">Microsoft Windows Systems Administrator</a> </td>
-      <td> <a href="/?etl-to-elt">Business Analysis</a> </td>
-      <td> <a href="/?programming">Programming</a> </td>
-      <td>~</td>
-    </div>
     
-    <div background-image="https://david-c-surbey.github.io/favicon.ico" background-repeat="no-repeat">
-      <div id="cards"></div>
-    </div>
+    <div id="site"></div>
     <div id="directory" class="directory"></div>
     <div id="date-time-region">--footed-space--</div>
     
@@ -51,7 +41,7 @@
       const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".html");
 
       document.getElementById("directory").innerHTML = directly_for;
-      document.getElementById("cards").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time; 
     </script>
   </body>
