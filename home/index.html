@@ -1,4 +1,58 @@
-Greetings &<br />
-Salutations!
+<!DOCTYPE html>
+  <header>
+  <title>¡-Bueno.Computer- Free-Web-Site-Guide!!</title>
+  <style >
+    body {   
+      padding-left: 3em;
+      padding-top: 2.1em;
+      margin-left: 1.25em;
+      margin-right: 1.25em;
+      padding-right: 1em;
+      padding-bottom: 0em;
+      color: grey;
+    }
 
+    iframe {
+      width: 90%;
+    }
+    
+    div.menu td {
+     padding: .5em; 
+    }
 
+    div.menu a {
+      font-size: 1.2em;
+    }
+
+  </style>
+  <head />
+  </header>
+  
+  <body>
+    <div class="menu">
+      <td>~</td>
+      <td> <a href="/">Home</a> </td>
+      <td> <a href="/?contact">Contact</a> </td>
+      <td> <a href="/?skillset">Microsoft Windows Systems Administrator</a> </td>
+      <td> <a href="/?etl-to-elt">Business Analysis</a> </td>
+      <td> <a href="/?programming">Programming</a> </td>
+      <td>~</td>
+    </div>
+    
+    <div background="https://david-c-surbey.github.io/favicon.ico" background-repeat="no-repeat">
+      <div id="cards"></div>
+    </div>
+    <div id="directory" class="directory"></div>
+    <div id="date-time-region">--footed-space--</div>
+    
+    <script>
+      let search = document.location.search || "?index";
+      const date_time = new Date();
+      const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".html");
+
+      document.getElementById("directory").innerHTML = directly_for;
+      document.getElementById("cards").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("date-time-region").innerHTML = date_time; 
+    </script>
+  </body>
+</html>
