@@ -65,7 +65,7 @@
       <li id="programming"><a href="/?programming">Programming</a></li>
     </div>
     <address id="site">
-      --!!--  
+      --!--  
     </address>
     <div id="directory" class="directory"></div>
     <div id="date-time-region">--footed-space--</div>
@@ -78,7 +78,11 @@
       const directly_for = new String("/home/") + directory + new String(".htm");
 
       document.getElementById("directory").innerHTML = directly_for;
-      document.getElementById(new String(directory)).outerHTML = "<li id=" + String(directory) + " class=" + String('under-lining') + ">";
+      document.getElementById(new String(directory)).outerHTML = 
+        "<li id=" + String(directory) + 
+        " class=" + String('under-lining') + ">" + 
+        document.getElementById(new String(directory)).innerHTML.value + 
+        "</li>";
       document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time; 
     </script>
