@@ -87,7 +87,7 @@
 
       document.getElementById("directory").innerHTML = directly_for;
       document.getElementById(new String(directory)).outerHTML = 
-        "<div class=" + String('menu-link-selected') + "> 
+        "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
       document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time; 
