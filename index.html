@@ -40,10 +40,6 @@
       height: 110%;
     }
 
-    div.site.iframe {
-      width: 50%;
-    }
-
     div.footer {
       padding-top: 2em;
     }
@@ -90,7 +86,7 @@
       document.getElementById(new String(directory)).outerHTML = 
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
-      document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("site").innerHTML = "<iframe height=90%;width=90% src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time; 
     </script>
   </body>
