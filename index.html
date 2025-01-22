@@ -37,7 +37,7 @@
       height: 110%;
     }
 
-    #under-lining a {
+    #menu-link-selected a {
       text-decoration-line: yes;
       color: grey;
       font-size: 2.1em;
@@ -65,12 +65,12 @@
   
   <body>
     <div class="menu">
-      <a id="about" href="/">Home</a>
-      <a id="contact" href="/?contact">Contact</a>
-      <a id="resumes" href="/?resumes">Resume</a>
-      <a id="skillset" href="/?skillset">Microsoft Windows Systems Administrator</a>
-      <a id="etl-to-elt" href="/?etl-to-elt">Business Analysis</a>
-      <a id="programming" href="/?programming">Programming</a>
+      <a id="about" href="/">Home </a>
+      <a id="contact" href="/?contact">Contact </a>
+      <a id="resumes" href="/?resumes">Resume </a>
+      <a id="skillset" href="/?skillset">Microsoft Windows Systems Administrator </a>
+      <a id="etl-to-elt" href="/?etl-to-elt">Business Analysis </a>
+      <a id="programming" href="/?programming">Programming </a>
     </div>
     <address id="site">
       --!--  
@@ -87,9 +87,8 @@
 
       document.getElementById("directory").innerHTML = directly_for;
       document.getElementById(new String(directory)).outerHTML = 
-        "<li id=" + String(directory) + 
-        " class=" + String('under-lining') + ">" + 
-        document.getElementById(String(directory)).outerHTML + "</li>";
+        "<div class=" + String('menu-link-selected') + "> 
+        document.getElementById(String(directory)).outerHTML + "</div>";
       document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time; 
     </script>
