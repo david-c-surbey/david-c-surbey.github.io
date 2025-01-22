@@ -40,6 +40,11 @@
       height: 110%;
     }
 
+    iframe {
+      width: 90%;
+      height: 75%;
+    }
+
     div.footer {
       padding-top: 2em;
     }
@@ -70,7 +75,7 @@
       </table>
     </div>
     <div id="site">
-      --!--  
+      <iframe /> 
     </div>
     <div id="directory" class="directory"></div>
     <div id="date-time-region">--footed-space--</div>
@@ -86,7 +91,7 @@
       document.getElementById(new String(directory)).outerHTML = 
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
-      document.getElementById("site").innerHTML = "<iframe height=90%;width=90% src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time; 
     </script>
   </body>
