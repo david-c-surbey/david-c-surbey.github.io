@@ -56,12 +56,12 @@
   
   <body>
     <div class="menu">
-      <a href="/">Home </a>
-      <a href="/?contact">Contact </a>
-      <a href="/?resumes">Resume </a>
-      <a href="/?skillset">Microsoft Windows Systems Administrator </a>
-      <a href="/?etl-to-elt">Business Analysis </a>
-      <a href="/?programming">Programming </a>
+      <a href="/">Home<i id="?about"></i></a>
+      <a href="/?contact">Contact<i id="?contact"></i></a>
+      <a href="/?resumes">Resume<i id="?resumes"></i></a>
+      <a href="/?skillset">Microsoft Windows Systems Administrator<i id="?skillset"></i></a>
+      <a href="/?etl-to-elt">Business Analysis<i id="?etl-to-elt"></i></a>
+      <a href="/?programming">Programming<i id="?programming"></i></a>
     </div>
     <address id="site">
       --!--  
@@ -76,6 +76,7 @@
       const directly_for = new String("/home/") + new String(search.substring(1)) + new String(".htm");
 
       document.getElementById("directory").innerHTML = directly_for;
+      document.getElementById(String(directly_for)).innerHTML = "<-";
       document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time; 
     </script>
