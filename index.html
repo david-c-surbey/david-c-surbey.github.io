@@ -10,6 +10,7 @@
       padding-right: 1em;
       padding-bottom: 0em;
       color: grey;
+      background-color: grey;
     }
     
     div.menu {
@@ -49,10 +50,24 @@
       padding-top: 2em;
     }
 
+    div.footer .home-address {
+      background-color: darkorange;
+      font-size:  1.3em;
+      color:  white;
+      font-style: italic;
+      padding: 1em;
+      margin-left: -2%;
+      width: 70%;
+    }
+
+    div.footer .div {
+      border-right: 2pt dashed green;
+    }
+
     div.footer img {
-      margin-left: 35%;
-      width: 30%;
-      margin-right: 35%;
+      padding-left: 85%;
+      margin-top: -5%;
+      width: 10%;
     }
 
   </style>
@@ -77,9 +92,13 @@
     <div id="site">
       <iframe></iframe>
     </div>
-    <div id="directory" class="directory"></div>
-    <div id="date-time-region">--footed-space--</div>
-    <div class="footer"><a href="/"><img src="https://david-c-surbey.github.io/favicon.ico" /></a></div>
+    <div class="footer">
+      <div class="home-address">
+        <div id="directory" class="directory"></div>
+        <div id="date-time-region">--footed-space--</div>
+      </div>
+      <a href="/"><img src="https://david-c-surbey.github.io/favicon.ico" /></a>
+    </div>
     
     <script>
       let search = document.location.search || "?about";
