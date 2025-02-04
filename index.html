@@ -50,6 +50,10 @@
       margin-bottom: 15%;
     }
 
+    div#site#article-register {
+      color: yellow;
+    }
+
     iframe {
       font-size: 1.3em;
       width: 75%;
@@ -110,7 +114,9 @@
       </table>
     </div>
     <div id="site">
-      <iframe></iframe>
+      <div id="article-register">
+        <iframe></iframe>
+      </div>
     </div>
     <div class="footer">
       <div class="home-address">
@@ -133,7 +139,7 @@
       document.getElementById(new String(directory)).outerHTML = 
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
-      document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("article-register").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time; 
     </script>
   </body>
