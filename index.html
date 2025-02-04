@@ -47,13 +47,13 @@
       border-left: 4pt solid black;
       background-color: darkorange;
       padding-bottom: 15%;
-      margin-bottom: 5%;
+      margin-bottom: 15%;
     }
 
     iframe {
-      font-size: 1.25em;
-      width: 90%;
-      height: 15em;
+      font-size: 1.3em;
+      width: 75%;
+      height: 15.5em;
       background-color: lightblue;
       border: 6pt dashed white;
       margin-left: 2%;
@@ -133,7 +133,8 @@
       document.getElementById(new String(directory)).outerHTML = 
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
-      document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("site").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe> <br />
+<ul><li>--register-digest--</li></ul>";
       document.getElementById("date-time-region").innerHTML = date_time; 
     </script>
   </body>
