@@ -69,7 +69,7 @@
     iframe {
       font-size: 1.15em;
       width: 90%;
-      height: .7em;
+      height: 45em;
       background-color: lightblue;
       border: 6pt dashed white;
       margin-left: 2%;
@@ -132,13 +132,6 @@
       </table>
     </div>
     <div id="site">
-      <div id="breakdown">
-        <ul>
-          <li id="fatigue"><div>circuit~document</div></li>
-        </ul></div>
-      <div id="run-options">
-        <div>circuit~effort</div>
-      </div>
       <div id="article-register">
         <iframe></iframe>
       </div>
@@ -175,10 +168,6 @@
       document.getElementById("article-register").innerHTML = "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time;
 
-document.getElementById("fatigue").innerHTML = header_breakdown;
-
-document.getElementById("run-options").innerHTML = document.getElementById("article-frame").contentDocument.body.innerHTML;
-document.getElementById("run-options").innerHTML = document.getElementById("article-frame").contentDocument.body.innerHTML
     </script>
   </body>
 </html>
