@@ -164,13 +164,17 @@
       const date_time = new Date();
       const directory = search.substring(1);
       const directly_for = new String("/home/") + directory + new String(".htm");
+      const header_breakdown = new String("~pass-through~");
 
       document.getElementById("directory").innerHTML = directly_for;
       document.getElementById(new String(directory)).outerHTML = 
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
       document.getElementById("article-register").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
-      document.getElementById("date-time-region").innerHTML = date_time; 
+      document.getElementById("date-time-region").innerHTML = date_time;
+
+document.getElementById("fatigue").innerHTML = header_breakdown;
+
     </script>
   </body>
 </html>
