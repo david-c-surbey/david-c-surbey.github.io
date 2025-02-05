@@ -172,12 +172,12 @@
       document.getElementById(new String(directory)).outerHTML = 
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
-      document.getElementById("article-register").innerHTML = "<iframe src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("article-register").innerHTML = "<iframe id=" + String('article-register-iframe') + " src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time;
 
 document.getElementById("fatigue").innerHTML = header_breakdown;
 
-document.getElementById("run-options").innerHTML = document.getElementById("article-register").iframe.innerHTML;
+document.getElementById("run-options").innerHTML.value = document.getElementById("article-register-iframe").innerHTML;
 
     </script>
   </body>
