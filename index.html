@@ -64,6 +64,7 @@
 
     #breakdown#run-options {
       background-color: darkorange;
+      font: small;
     }
 
     #article-register {
@@ -138,8 +139,8 @@
     <div id="site">
       <div id="breakdown">
         <ul class="site">
-          <li id="break-down-item" class="site"></li>
-          <li id="run-options" class="site"></li>
+          <li id="break-down-item" class="site">~breakdown~</li>
+          <li id="run-options" class="site">~run-options-area~</li>
         </ul>
       </div>
       <div id="article-register">
@@ -171,7 +172,7 @@
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
       document.getElementById("article-register").innerHTML = "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
-      document.getElementById("run-options").innerHTML = "<div id="run-options" type="text/html" data=" + String(direct_for) + "><h3>w/out css -> </h3>";
+      document.getElementById("run-options").innerHTML = "<div type="+ String('text/html') + " data=" + String(directly_for) + "> <h3>w/out css -> </h3>";
       document.getElementByID("break-down-item").innerText = header_breakdown;
       document.getElementById("date-time-region").innerHTML = date_time;
       document.getElementById("asset_frame").innerHTML = article_text.contentDocument.body;
