@@ -158,16 +158,16 @@
       const directly_for = new String("/home/") + directory + new String(".htm");
       const header_breakdown = new String("~pass-through~");
 
-      document.getElementById("asset-frame").innerHTML = article_text || 'nothing-found';
+      let x = document.getElementById("asset_frame");
       document.getElementById("directory").innerHTML = directly_for;
       document.getElementById(new String(directory)).outerHTML = 
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
-      document.getElementById("article-register").innerHTML = "<div id=" + String('asset-frame') + "></div></br>" + "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("article-register").innerHTML = "<div id=" + String('asset_frame') + "></div></br>" + "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
       
-      article_text = document.getElementById("article-frame").innerHTML.contentDocument.body.innerHTML || "<div>~document-not-parsed~</div>";
+      article_text = String(x.innerHTML) || String(document.getElementById(String('asset_frame')).innerHTML) || String('<div></div>');
       document.getElementById("date-time-region").innerHTML = date_time;
-      document.getElementById("asset-frame").innerHTML = article_text.innerHTML || 'nothing-found-still';
+      document.getElementById("asset_frame").innerHTML = article_text.contentDocument.body.innerHTML || 'nothing-found-still';
       
     </script>
   </body>
