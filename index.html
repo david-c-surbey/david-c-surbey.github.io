@@ -165,7 +165,7 @@
         document.getElementById(String(directory)).outerHTML + "</div>";
       document.getElementById("article-register").innerHTML = "<div id=" + String('asset_frame') + "></div></br>" + "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
       
-      article_text = String(x) || String(document.getElementById(String('asset_frame')).innerHTML) || String('<div></div>');
+      article_text = String(document.getElementById(String('asset_frame')).innerHTML) || String('<div></div>');
       document.getElementById("date-time-region").innerHTML = date_time;
       document.getElementById("asset_frame").innerHTML = article_text;
       
