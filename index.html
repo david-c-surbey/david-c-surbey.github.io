@@ -155,6 +155,7 @@
     
     <script>
       let search = document.location.search || "?about";
+      let article_text = new String();
       const date_time = new Date();
       const directory = search.substring(1);
       const directly_for = new String("/home/") + directory + new String(".htm");
@@ -167,8 +168,8 @@
       document.getElementById("article-register").innerHTML = "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time;
 
-      let x = document.getElementById("article-frame");
-      document.getElementById("article").innerHTML = String(x.contentDocument.body.innerHTML);
+      article_text = document.getElementById("article-frame").contentDocument.body.outerHTML;
+      document.getElementById("article").innerHTML = article_text;
     </script>
   </body>
 </html>
