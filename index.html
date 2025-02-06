@@ -152,7 +152,7 @@
     
     <script>
       let search = document.location.search || "?about";
-      let article_text = new String();
+      let article_text = "<div></div>";
       const date_time = new Date();
       const directory = search.substring(1);
       const directly_for = new String("/home/") + directory + new String(".htm");
@@ -163,10 +163,10 @@
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
       document.getElementById("article-register").innerHTML = "<div id=" + String('asset-frame') + "></div>>br />" + "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
+      article_text = article_text + document.getElementById("article-register").innerHTML.contentDocument.body.innerHTML;
       document.getElementById("date-time-region").innerHTML = date_time;
-
-      article_text = document.getElementById("article-frame").contentDocument.body.innerHTML;
       document.getElementById("asset-frame").textContent = article_text;
+    
     </script>
   </body>
 </html>
