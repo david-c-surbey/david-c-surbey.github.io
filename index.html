@@ -158,15 +158,17 @@
       const directly_for = new String("/home/") + directory + new String(".htm");
       const header_breakdown = new String("~pass-through~");
 
+      document.getElementById("asset-frame").innerHTML = article_text || 'nothing-found';
       document.getElementById("directory").innerHTML = directly_for;
       document.getElementById(new String(directory)).outerHTML = 
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
       document.getElementById("article-register").innerHTML = "<div id=" + String('asset-frame') + "></div></br>" + "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
-      article_text = article_text + document.getElementById("article-frame").innerHTML.contentDocument;
+      
+      article_text = document.getElementById("article-frame").innerHTML.contentDocument.body;
       document.getElementById("date-time-region").innerHTML = date_time;
-      document.getElementById("asset-frame").textContent = article_text.body.textContent || 'nothing-found';
-    
+      document.getElementById("asset-frame").innerHTML = article_text.innerHTML || 'nothing-found-still';
+      
     </script>
   </body>
 </html>
