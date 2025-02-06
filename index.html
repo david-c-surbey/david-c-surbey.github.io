@@ -168,7 +168,7 @@
       document.getElementById("article-register").innerHTML = "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time;
 
-      article_text = document.getElementById("article-frame").contentDocument.body.outerHTML;
+      article_text = document.getElementById("article-frame").contentDocument.body.innerHTML;
       document.getElementById("article").innerHTML = article_text;
     </script>
   </body>
