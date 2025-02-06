@@ -162,10 +162,10 @@
       document.getElementById(new String(directory)).outerHTML = 
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
-      document.getElementById("article-register").innerHTML = "<div id=" + String('asset-frame') + "></div>>br />" + "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
-      article_text = article_text + document.getElementById("article-register").innerHTML.contentDocument.body.innerHTML;
+      document.getElementById("article-register").innerHTML = "<div id=" + String('asset-frame') + "></div></br>" + "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
+      article_text = article_text + document.getElementById("article-frame").innerHTML.contentDocument;
       document.getElementById("date-time-region").innerHTML = date_time;
-      document.getElementById("asset-frame").textContent = article_text;
+      document.getElementById("asset-frame").textContent = article_text.body.textContent || 'nothing-found';
     
     </script>
   </body>
