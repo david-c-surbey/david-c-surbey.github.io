@@ -62,6 +62,10 @@
       padding: 1.125em;
     }
 
+    #breakdown#run-options {
+      background-color: darkorange;
+    }
+
     #article-register {
       color: yellow;
     }
@@ -132,12 +136,17 @@
       </table>
     </div>
     <div id="site">
-      <div id="article">~article-content~</div>
+      <div id="breakdown">
+        <ul class="site">
+          <li id="break-down-item" class="site"></li>
+          <li id="run-options" class="site"></li>
+        </ul>
+      </div>
       <div id="article-register">
         <iframe></iframe>
       </div>
       <div class="made-center">
-        ---- <b><i>scroll</i></b> in the box<b>above: true.</b> --
+        --- DS ---
       </div>
       
     </div>
@@ -152,7 +161,6 @@
     
     <script>
       let search = document.location.search || "?about";
-      let article_text = "<div>~</div>";
       const date_time = new Date();
       const directory = search.substring(1);
       const directly_for = new String("/home/") + directory + new String(".htm");
@@ -162,11 +170,9 @@
       document.getElementById(new String(directory)).outerHTML = 
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
-      document.getElementById("article-register").innerHTML = "<div id=" + String('asset_frame') + "></div></br>" + "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
-
-      const x = document.getElementById("asset_frame");
-      const y = document.getElementById("article-register");
-      article_text = document.getElementById("article_frame");
+      document.getElementById("article-register").innerHTML = "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
+      document.getElementById("run-options").innerHTML = "<div id="run-options" type="text/html" data=" + String(direct_for) + "><h3>w/out css -> </h3>";
+      document.getElementByID("break-down-item").innerText = header_breakdown;
       document.getElementById("date-time-region").innerHTML = date_time;
       document.getElementById("asset_frame").innerHTML = article_text.contentDocument.body;
       
