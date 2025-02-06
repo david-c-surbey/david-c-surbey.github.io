@@ -167,7 +167,7 @@
       
       article_text = String(x) || String(document.getElementById(String('asset_frame')).innerHTML) || String('<div></div>');
       document.getElementById("date-time-region").innerHTML = date_time;
-      document.getElementById("asset_frame").innerHTML = article_text.contentDocument.body.innerHTML || 'nothing-found-still';
+      document.getElementById("asset_frame").innerHTML = article_text;
       
     </script>
   </body>
