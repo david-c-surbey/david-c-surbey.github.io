@@ -90,6 +90,8 @@
     }
 
     div.footer {
+      font-size: 1.3em;
+      font-color: #800020;
       padding-top: 2em;
       border-top: 6pt solid black;
       border-left: 4pt solid black;
@@ -147,14 +149,13 @@
         <iframe></iframe>
       </div>
       <div class="made-center">
-        --- DS ---
+        --- <div id="date-time-region">--footed-space--</div> ---
       </div>
       
     </div>
     <div class="footer">
       <div class="home-address">
         <div id="directory" class="directory"></div>
-        <div id="date-time-region">--footed-space--</div>
       </div>
       <img src="https://david-c-surbey.github.io/favicon.ico" />
       
@@ -173,7 +174,7 @@
         document.getElementById(String(directory)).outerHTML + "</div>";
       document.getElementById("article-register").innerHTML = "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
       document.getElementById("run-options").innerHTML = "<div type="+ String('text/html') + " data=" + String(directly_for) + "> <h3>w/out css -> </h3>";
-      document.getElementByID("break-down-item").innerText = header_breakdown;
+      document.getElementById("break-down-item").innerText = header_breakdown;
       document.getElementById("date-time-region").innerHTML = date_time;
       document.getElementById("asset_frame").innerHTML = article_text.contentDocument.body;
       
