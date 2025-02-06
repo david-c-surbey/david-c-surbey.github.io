@@ -165,9 +165,9 @@
         document.getElementById(String(directory)).outerHTML + "</div>";
       document.getElementById("article-register").innerHTML = "<div id=" + String('asset_frame') + "></div></br>" + "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
       
-      article_text = document.getElementById("asset_frame");
+      article_text = document.getElementById("article_frame");
       document.getElementById("date-time-region").innerHTML = date_time;
-      document.getElementById("asset_frame").innerHTML = article_text.contentDocument;
+      document.getElementById("asset_frame").innerHTML = article_text.contentDocument.body.innerHTML;
       
     </script>
   </body>
