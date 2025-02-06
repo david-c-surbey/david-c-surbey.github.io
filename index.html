@@ -132,6 +132,7 @@
       </table>
     </div>
     <div id="site">
+      <div id="article"></div>
       <div id="article-register">
         <iframe></iframe>
       </div>
@@ -166,6 +167,8 @@
       document.getElementById("article-register").innerHTML = "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
       document.getElementById("date-time-region").innerHTML = date_time;
 
+      let x = document.getElementById("article-frame");
+      document.getElementById("article").innerHTML = String(x.contentDocument.body.innerHTML);
     </script>
   </body>
 </html>
