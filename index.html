@@ -62,13 +62,6 @@
       padding: 1.125em;
     }
 
-    #breakdown #run-options {
-      background-color: darkorange;
-      height: 175%;
-      font-size: .5em;
-      border: 1pt dashed black;
-    }
-
     #article-register {
       color: yellow;
     }
@@ -146,7 +139,6 @@
       <div id="breakdown">
         <ul class="site">
           <li id="break-down-item" class="site">~breakdown~</li>
-          <li id="run-options" class="site">~run-options-area~</li>
         </ul>
       </div>
       <div id="article-register">
@@ -178,8 +170,7 @@
         "<div class=" + String('menu-link-selected') + ">" + 
         document.getElementById(String(directory)).outerHTML + "</div>";
       document.getElementById("article-register").innerHTML = "<iframe id=" + String('article-frame') + " src=" + String(directly_for) + "> </iframe>";
-      document.getElementById("run-options").innerHTML = "<object id=" + String('text-html-try') + " type=" + String('text/html') + " class=" + String('site') + " data=" + String(directly_for) + "> <h3>w/out css -> </h3>";
-      document.getElementById("break-down-item").innerText = String('https://david-c-surbey.github.io') + directly_for;
+      document.getElementById("break-down-item").innerText ="<a target=" + String('_blank') + " href=" + String('https://david-c-surbey.github.io') + directly_for + "> View w/out CSS</a>";
       document.getElementById("date-time-region").innerHTML = date_time;
       
     </script>
